@@ -41,5 +41,7 @@ Domera is a comprehensive full-stack landlord dashboard designed to streamline r
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/domera.git
+https://github.com/BernardoOdreman/Domera-rental-management.git
 cd domera
+npm install
+
