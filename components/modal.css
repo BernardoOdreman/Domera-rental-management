@@ -1,0 +1,36 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .print-section, 
+  .print-section * {
+    visibility: visible;
+  }
+  
+  .print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 20px !important;
+  }
+  
+  .print-section .prose {
+    max-width: 100% !important;
+  }
+  
+  .print-section .bg-slate-50 {
+    background-color: transparent !important;
+  }
+  
+  .print-section .rounded-lg {
+    border-radius: 0 !important;
+  }
+  
+  .print-section .shadow-sm {
+    box-shadow: none !important;
+  }
+}
