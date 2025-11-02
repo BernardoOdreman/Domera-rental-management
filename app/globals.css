@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text-foreground : 0 0% 10%; ;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 97%; /* Slightly darker than white background */
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 38 92% 10%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 38 92% 50%;
+    --radius: 0.5rem;
+  }
+
+  [data-theme="teal"] {
+    --primary: 173 80% 40%;
+    --primary-foreground: 173 80% 10%;
+    --ring: 173 80% 40%;
+  }
+
+  [data-theme="rose"] {
+    --primary: 346 77% 49%;
+    --primary-foreground: 346 77% 10%;
+    --ring: 346 77% 49%;
+  }
+
+  [data-theme="blue"] {
+    --primary: 221 83% 53%;
+    --primary-foreground: 221 83% 10%;
+    --ring: 221 83% 53%;
+  }
+
+  [data-theme="purple"] {
+    --primary: 271 91% 65%;
+    --primary-foreground: 271 91% 10%;
+    --ring: 271 91% 65%;
+  }
+
+  [data-theme="green"] {
+    --primary: 142 71% 45%;
+    --primary-foreground: 142 71% 10%;
+    --ring: 142 71% 45%;
+  }
+
+  [data-theme="white"] {
+    --primary: 0 0% 95%;
+    --primary-foreground: 240 10% 3.9%;
+    --ring: 0 0% 80%;
+  }
+
+  [data-theme="black"] {
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 95%;
+    --ring: 0 0% 20%;
+  }
+}
+
+/* Add custom color theme support */
+[data-theme="custom"] {
+  --primary: var(--custom-color, 221 83% 53%);
+  --primary-foreground: var(--custom-color-foreground, 221 83% 10%);
+  --ring: var(--custom-color, 221 83% 53%);
+}
+
+.dark {
+  --text-foreground : 210 70% 90%; ;
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 6.5%; /* Lighter than background */
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 6.5%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 38 92% 50%;
+  --primary-foreground: 38 92% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 38 92% 50%;
+  --sidebar-bg: 240 10% 5.5%; /* Slightly lighter than background but darker than cards */
+}
+
+.dark[data-theme="teal"] {
+  --primary: 173 80% 40%;
+  --primary-foreground: 173 80% 10%;
+  --ring: 173 80% 40%;
+}
+
+.dark[data-theme="rose"] {
+  --primary: 346 77% 49%;
+  --primary-foreground: 346 77% 10%;
+  --ring: 346 77% 49%;
+}
+
+.dark[data-theme="blue"] {
+  --primary: 221 83% 53%;
+  --primary-foreground: 221 83% 10%;
+  --ring: 221 83% 53%;
+}
+
+.dark[data-theme="purple"] {
+  --primary: 271 91% 65%;
+  --primary-foreground: 271 91% 10%;
+  --ring: 271 91% 65%;
+}
+
+.dark[data-theme="green"] {
+  --primary: 142 71% 45%;
+  --primary-foreground: 142 71% 10%;
+  --ring: 142 71% 45%;
+}
+
+.dark[data-theme="white"] {
+  --primary: 0 0% 95%;
+  --primary-foreground: 240 10% 3.9%;
+  --ring: 0 0% 80%;
+}
+
+.dark[data-theme="black"] {
+  --primary: 0 0% 10%;
+  --primary-foreground: 0 0% 95%;
+  --ring: 0 0% 20%;
+}
+
+/* Add this at the end of the file to properly hide scrollbars */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Fix vendor card styling */
+.vendor-card {
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.vendor-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Vendor preview card styling */
+.dialog-content .rounded-lg {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.dialog-content .rounded-lg:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Add these styles at the end of the file */
+
+/* Address autocomplete styles */
+.address-suggestion-item {
+  transition: background-color 0.15s ease;
+}
+
+.address-suggestion-item:hover {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.address-suggestion-item.highlighted {
+  background-color: hsl(var(--muted));
+  font-weight: 500;
+}
+
+.address-loading-indicator {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    @apply text-foreground;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
