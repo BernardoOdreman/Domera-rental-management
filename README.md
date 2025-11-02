@@ -28,9 +28,7 @@ Domera is a comprehensive full-stack landlord dashboard designed to streamline r
 - **LangChain.js** - AI orchestration and chain management
 - **OpenAI API** - Natural language processing
 - **LangSmith** - AI tracing and monitoring
-
-
-![](Screenshot 2025-11-02 at 15-06-54 Domera - Landlord Dashboard.png)
+ 
 
 ## 🚀 Quick Start
 
